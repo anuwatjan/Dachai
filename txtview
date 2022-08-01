@@ -1,0 +1,9 @@
+CREATE view view_product_detail as select * from product a LEFT JOIN type_product b on a.product_type = b.type_id and LEFT join unit c on a.product_unit = c.unit_id and LEFT join  category d on a.product_category = d.category_id and left join sympton e on a.product_symp = e.symp_id
+
+
+
+CREATE view view_partner as SELECT  *  from partner a join partner_detail b on a.partner_id = b.partner_id
+
+
+
+CREATE view view_product_barcode as SELECT * from product a join barcode b on a.product_id = b.barcode_proid WHERE (b.barcode_proid IS NULL)
